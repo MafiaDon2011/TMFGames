@@ -1,0 +1,314 @@
+:root{
+  font-size: 16px;
+  font-family: 'Roboto', 'sans-serif';
+  --text-primary: #b6b6b6;
+  --text-secondary: rgb(231, 235, 3);
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+   
+}
+
+
+h2{
+ color: white;
+}
+
+h3{
+ color: white;
+}
+
+h4{
+ color: white;
+}
+
+h5{
+ color: white;
+}
+
+p{
+ color: white;
+}
+
+
+/* creating a clicking cursor/animation for change theme */
+
+#Change_Theme svg {
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition: transform var (--transition-speed);
+  transition: all 2s;
+}
+
+#Change_Theme:hover svg {
+  transform: rotate(-360deg);
+}
+/* Progress Bar */
+.progress {
+  position: fixed;
+  height: 20px;
+  background-color: rgb(231, 235, 3);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 250px;
+  color: black;
+  background-color: #0F1108;
+  font-family: 'Roboto', 'sans-serif';
+ 
+  
+}
+
+/* Ultering the scrollbar to something better than browser default */
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+} 
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb{
+  background: rgba(231, 235, 6, 0.705);
+}
+
+/* ultering the <main> tag */
+
+main{
+  margin-left: 5rem; /* unit relative to the font-size */
+  padding: 1rem;
+  min-width: 460px;
+  min-height: 1200px;
+  background-color: #0F1108;
+  color: white;
+ 
+
+}
+
+/* Nav bar css */
+
+.navbar {
+  position: fixed;
+  background-color: var(--bg-primary);
+  transition: width 200ms ease;
+}
+
+.navbar-nav{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+.nav-item{
+  width: 100%;
+}
+
+.nav-item:last-child{
+  margin-top: auto;
+}
+
+.nav-link{
+  display:flex;
+  align-items: center;
+  height: 3.5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  filter: grayscale() opacity(0.7);
+  transition: var(--transition-speed);
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.link-text{
+  display: none;
+}
+
+
+.nav-link svg{
+  min-width: 1.5rem;   
+  margin: 0 1.5rem;
+  transition: width 200ms ease;
+}
+
+.nav-link:hover{
+  filter: grayscale(0%) opacity(1);
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  transition: 2ms ease-in; 
+  
+}
+
+.navbar:hover .link-text{
+  display: block;
+  color: whitesmoke;
+
+}
+
+.logo{
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3ch;
+  width: 100%;
+}
+
+.logo svg {
+  transform: rotate(0deg);
+  transition: transform var (--transition-speed);
+  transition: all 1s;
+}
+.navbar:hover .logo svg {
+  transform: rotate(-180deg);
+}
+
+
+/* Using a footer */
+
+/* This is styling the <footer> content in the body */
+
+.wrapper-footer {
+  width: 1100px;
+  margin: 0 auto;
+}
+.single-footer {
+  width: 33%;
+  float: left;
+  text-align: left;
+  color: #fff;
+}
+
+.single-footer h2 {
+  position: relative;
+  left: 85px;
+  text-decoration: underline;
+}
+
+.single-footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  left: 85px;
+  width: 50%;
+}
+.single-footer ul a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  
+  
+}
+
+.single-footer ul a:hover {
+  color: rgb(231, 235, 3);
+}
+.single-footer p {
+  width: 70%;
+  position: relative;
+  font-size: 12px; 
+  left: 85px;
+}
+
+.single-footer container svg {
+  width: 100px;
+  height: 100px;
+  color: white;
+}
+
+.single-footer container svg:hover {
+  color: rgb(231, 235, 3);
+  transition: 350ms ease-in;
+}
+
+
+footer{
+  width: 100%;
+  height: 250px;
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
+  background-color: #262626;
+}
+
+/* creating an animated neon button */
+
+#pcmasterrace {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #fac000;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.2s;
+
+}
+
+#pcmasterrace a:hover {
+  background: #fac000;
+}
+
+#pcmasterrace:hover {
+  color: #fdfdfd;
+  background: #fac000;
+  box-shadow: 0 0 5px #fac000, 0 0 20px #fac000, 0 0 40px #fac000;
+  transition-delay: 1s;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar{
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+  
+  .logo{
+    display: none;
+  }
+  
+  navbar-nav{
+    flex-direction: row;
+  }
+  
+  nav-link{
+    justify-content: center;
+  }
+  
+  main {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar {
+    top: 0;
+    width: 5rem;
+    height: 100vh; /* unit relative to size of view port */
+  }
+  
+  .navbar:hover{
+  width: 15rem;
+}
+  
+  .navbar:hover .link-text{
+  display: inline;
+   transition: opacity var (--transition-speed);
+}
+}
